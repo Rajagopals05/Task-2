@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2 - Responsive Web App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Flexbox Navigation Header -->
+    <header class="navbar">
+        <div class="logo">ApexPlanet Task 2</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#todo">To-Do List</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <!-- CSS Grid Content Showcase -->
+        <section id="projects" class="section">
+            <h2>Featured Projects</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Project Alpha</h3>
+                    <p>Responsive layout built with modern Flexbox & CSS Grid.</p>
+                </div>
+                <div class="card">
+                    <h3>Project Beta</h3>
+                    <p>Interactive DOM manipulation with dynamic user controls.</p>
+                </div>
+                <div class="card">
+                    <h3>Project Gamma</h3>
+                    <p>Client-side form validation ensuring strict data submission checks.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic To-Do List Application -->
+        <section id="todo" class="section">
+            <h2>Dynamic To-Do List</h2>
+            <div class="todo-app">
+                <div class="input-group">
+                    <input type="text" id="todoInput" placeholder="Enter a new task...">
+                    <button id="addBtn">Add Task</button>
+                </div>
+                <ul id="taskList"></ul>
+            </div>
+        </section>
+
+        <!-- Contact Form with Validation -->
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <form id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe">
+                    <small class="error-msg" id="nameError"></small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="example@domain.com">
+                    <small class="error-msg" id="emailError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Your message..."></textarea>
+                    <small class="error-msg" id="messageError"></small>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+                <p id="formSuccess" class="success-msg"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
